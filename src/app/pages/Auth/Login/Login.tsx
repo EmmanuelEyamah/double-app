@@ -61,7 +61,7 @@ const Login: FC<LoginProps> = () => {
         </AppButton>
         <div className="text-secondary mt-4 d-flex align-items-center justify-content-center">
           Don't have an account?{" "}
-          <Link to={"/login"}>
+          <Link to={"/signup"}>
             <span
               className="text-accent ms-1 fw-bold"
               style={{ textDecoration: "none !important" }}
