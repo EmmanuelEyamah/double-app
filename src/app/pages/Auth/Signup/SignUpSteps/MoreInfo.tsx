@@ -24,7 +24,7 @@ const MoreInfo: FC<MoreInfoProps> = ({ setStep }) => {
       }
       label="Kindly ensure that the details you provide match those on your BVN"
     >
-      <div style={{ width: "540px" }}>
+      <div style={{ width: "100%", maxWidth: "540px" }}>
         <div className="row">
           <div className="col-md-6">
             <FormInput type="text" placeholder="First Name" />

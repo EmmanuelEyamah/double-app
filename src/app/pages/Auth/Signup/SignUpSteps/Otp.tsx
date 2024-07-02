@@ -33,7 +33,7 @@ const OTP: FC<OtpProps> = ({ setStep }) => {
         subtitle={<span>An OTP has been sent to your Email Address</span>}
         label="Enter the otp sent to the email address ********@gmail.com you provided"
       >
-        <div style={{ width: "540px" }}>
+        <div style={{ width: "100%", maxWidth: "540px" }}>
           <FormInput type="text" placeholder="Enter OTP" />
           <AppButton
             variant="info"

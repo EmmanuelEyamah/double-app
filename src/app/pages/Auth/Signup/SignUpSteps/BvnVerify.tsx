@@ -32,7 +32,7 @@ const BvnVerify: FC<BvnVerifyProps> = ({ setStep }) => {
         subtitle="An OTP has been sent to your Phone Number"
         label="Enter the otp sent to your {******1150} or email address *******@gmail.com connected to your BVN"
       >
-        <div style={{ width: "540px" }}>
+        <div style={{ width: "100%", maxWidth: "540px" }}>
           <FormInput type="password" placeholder="Enter OTP" />
           <AppButton
             variant="info"

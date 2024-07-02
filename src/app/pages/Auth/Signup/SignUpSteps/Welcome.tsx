@@ -21,18 +21,18 @@ const WelcomeOnBoard: FC<WelcomeProps> = ({ setStep }) => {
         </div>
       }
     >
-      <div style={{ width: "540px" }}>
+      <div style={{ width: "100%", maxWidth: "540px" }}>
         <div className="d-flex flex-column align-items-center justify-content-center">
           <div className="success-img-box">
             <img src="/assets/check.png" alt="Loading..." />
           </div>
           <div
-            className="text-primary text-center mb-3"
+            className="text-primary text-center mb-3 text-center"
             style={{ width: "200px" }}
           >
             Your email has been successfully verified.
           </div>
-          <div className="text-secondary fw-lighter">
+          <div className="text-secondary fw-lighter text-center">
             Click "Proceed" to begin your investment journey
           </div>
         </div>

@@ -21,7 +21,7 @@ const StartPage: FC<StartPageProps> = ({ setStep }) => {
       label='"Enter your email address and create a secure password to begin your
             experience with us"'
     >
-      <div style={{ width: "540px" }}>
+      <div style={{ width: "100%", maxWidth: "540px" }}>
         <FormInput type="email" placeholder="Email Address" />
         <FormInput type="password" placeholder="Create Password" />
         <FormInput type="password" placeholder="Confirm Password" />

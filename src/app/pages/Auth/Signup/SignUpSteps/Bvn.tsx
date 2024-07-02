@@ -22,7 +22,7 @@ const Bvn: FC<BvnProps> = ({ setStep }) => {
       }
       label="Providing your BVN will help us verify your full name, phone number and date of birth."
     >
-      <div style={{ width: "540px" }}>
+      <div style={{ width: "100%", maxWidth: "540px" }}>
         <FormInput type="password" placeholder="BVN" />
         <AppButton
           variant="info"

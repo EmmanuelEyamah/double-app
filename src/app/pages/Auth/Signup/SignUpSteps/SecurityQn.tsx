@@ -39,7 +39,7 @@ const SecurityQn: FC<SecurityQnProps> = () => {
         subtitle="Set your Security Question"
         label="Security Question add extra layer of protection to your account"
       >
-        <div style={{ width: "540px" }}>
+        <div style={{ width: "100%", maxWidth: "540px" }}>
           <div>
             <Accordion defaultActiveKey="0">
               <Accordion.Item eventKey="0" className="mb-3">

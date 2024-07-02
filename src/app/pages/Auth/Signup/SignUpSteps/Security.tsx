@@ -22,7 +22,7 @@ const Security: FC<SecurityProps> = ({ setStep }) => {
       }
       label="Choose a username and transaction PIN for safe and easy access to your investment"
     >
-      <div style={{ width: "540px" }}>
+      <div style={{ width: "100%", maxWidth: "540px" }}>
         <div className="row">
           <div className="col-md-6">
             <FormInput type="text" placeholder="@Username" />

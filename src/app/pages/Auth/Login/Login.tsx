@@ -43,7 +43,7 @@ const Login: FC<LoginProps> = () => {
         </>
       }
     >
-      <div className="px-5">
+      <div className="px-md-5">
         <FormInput type="email" placeholder="Email Address" />
         <FormInput type="password" placeholder="Password" />
         <div className="d-flex align-items-center justify-content-between">
@@ -72,7 +72,7 @@ const Login: FC<LoginProps> = () => {
         </div>
         <div className="text-secondary mt-4 d-flex flex-column mt-5 align-items-center justify-content-center">
           <div className="text-secondary">By signing up you agree to our</div>
-          <div className="text-accent">
+          <div className="text-accent text-center">
             Terms and Conditions <span className="text-secondary">and</span>{" "}
             Privacy Statement
           </div>
