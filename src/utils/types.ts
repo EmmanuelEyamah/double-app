@@ -17,3 +17,9 @@ export type ISignUpStep =
   | "bvnVerify"
   | "security"
   | "securityQn";
+
+export interface Question {
+  id: number;
+  question: string;
+  answer: string;
+}

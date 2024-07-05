@@ -1,11 +1,9 @@
 import { FC, useState } from "react";
 import { ISignUpStep } from "../../../../../utils/types";
-import AppButton from "../../../../../components/ui/Button";
 import { SignUpContainer } from "../SignUpContainer";
-import { Accordion } from "react-bootstrap";
-import FormInput from "../../../../../components/ui/FormInput";
 import { useNavigate } from "react-router-dom";
 import { routeNames } from "../../../../../utils/routeNames";
+import CustomAccordion from "../../../../../components/ui/Accordian";
 
 export interface SecurityQnProps {
   setStep: React.Dispatch<React.SetStateAction<ISignUpStep>>;
@@ -14,8 +12,16 @@ const SecurityQn: FC<SecurityQnProps> = () => {
   const navigate = useNavigate();
 
   const [showOverlay, setShowOverlay] = useState(false);
+  const questions = [
+    { id: 0, question: "What is the name of your favourite pet?" },
+    { id: 1, question: "What is the name of your Mother's maiden name?" },
+    { id: 2, question: "What town were you born in?" },
+  ];
 
-  const proceedTologin = () => {
+  const proceedToLogin = (
+    answers: { questionId: number; answer: string }[]
+  ) => {
+    console.log("answers:", answers);
     setShowOverlay(true);
     setTimeout(() => {
       navigate(routeNames.login);
@@ -40,41 +46,7 @@ const SecurityQn: FC<SecurityQnProps> = () => {
         label="Security Question add extra layer of protection to your account"
       >
         <div style={{ width: "100%", maxWidth: "540px" }}>
-          <div>
-            <Accordion defaultActiveKey="0">
-              <Accordion.Item eventKey="0" className="mb-3">
-                <Accordion.Header>
-                  What the name of your favourite pet?
-                </Accordion.Header>
-                <Accordion.Body>
-                  <FormInput type="text" placeholder="nikky" />
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="1" className="mb-3">
-                <Accordion.Header>
-                  What the name of your Mother maiden name?
-                </Accordion.Header>
-                <Accordion.Body>
-                  <FormInput type="text" placeholder="patience" />
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="2">
-                <Accordion.Header>What town were you born?</Accordion.Header>
-                <Accordion.Body>
-                  <FormInput type="text" placeholder="kubwa" />
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-          </div>
-          <AppButton
-            variant="info"
-            size="lg"
-            fullWidth
-            className="mt-4"
-            onClick={proceedTologin}
-          >
-            Proceed
-          </AppButton>
+          <CustomAccordion questions={questions} onProceed={proceedToLogin} />
           <div
             className="text-secondary text-center mt-4 fw-lighter"
             style={{ fontSize: "14px" }}
